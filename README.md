@@ -27,10 +27,10 @@ http://localhost:8501
 
 
 ### Project Structure
-Dockerfile: Docker configuration for the Python app.
-docker-compose.yml: Docker Compose configuration for the services.
-requirements.txt: List of Python dependencies.
-start.sh: Shell script to run the data ingestion and Streamlit app.
-data/: Directory containing the data files (netflix_users.csv).
-app.py: Program containing the Streamlit app.
+- Dockerfile: Docker configuration for the Python app.
+- docker-compose.yml: Docker Compose configuration for the services.
+- requirements.txt: List of Python dependencies.
+- start.sh: Shell script to run the data ingestion and Streamlit app.
+- data/: Directory containing the data files (netflix_users.csv).
+- app.py: Program containing the Streamlit app.
 
