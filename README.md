@@ -1,5 +1,8 @@
 # Dockerized Streamlit App
 
+## Dataset Source: 
+- https://www.kaggle.com/datasets/smayanj/netflix-users-database
+  
 ## Prerequisites
 
 - Docker
