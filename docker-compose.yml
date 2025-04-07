@@ -10,6 +10,7 @@ services:
       - mongo-data:/data/db
 
   python-app:
+    image: balrog000/my-python-app:latest
     build: .
     container_name: my-python-app
     depends_on:
@@ -19,6 +20,12 @@ services:
       - ./data:/data
     ports:
       - "8501:8501"
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 2G
+
 
 volumes:
   mongo-data:
