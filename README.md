@@ -1,7 +1,11 @@
 # Dockerized Streamlit App
 
 ## Dataset Source: 
-- https://www.kaggle.com/datasets/smayanj/netflix-users-database
+- spotify dataset https://www.kaggle.com/datasets/yelexa/spotify200/data 
+- Weather dataset: Daily Total Rainfall All Year - King's Park - https://data.gov.hk/en-data/dataset/hk-hko-rss-daily-total-rainfall 
+- Daily Mean Hong Kong Heat Index All Year - King's Park - https://data.gov.hk/en-data/dataset/hk-hko-rss-daily-maximum-mean-heat-index 
+- Daily Mean Relative Humidity All Year - King's Park - https://data.gov.hk/en-data/dataset/hk-hko-rss-daily-mean-relative-humidity
+
   
 ## Prerequisites
 
@@ -31,6 +35,6 @@ http://localhost:8501
 - docker-compose.yml: Docker Compose configuration for the services.
 - requirements.txt: List of Python dependencies.
 - start.sh: Shell script to run the data ingestion and Streamlit app.
-- data/: Directory containing the data files (netflix_users.csv).
+- data/: Directory containing the data files 
 - app.py: Program containing the Streamlit app.
 
