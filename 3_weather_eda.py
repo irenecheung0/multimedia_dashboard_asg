@@ -36,9 +36,9 @@ def plot_normalized_time_series(df, title=None):
     
     # Set the chart title
     if title:
-        st.subheader(title)
+        st.header(title)
     else:
-        st.subheader('Values Over Time')
+        st.header('Values Over Time')
     
     # Create a copy of the dataframe for plotting
     chart_df = df_sorted.copy()
@@ -53,12 +53,6 @@ def plot_normalized_time_series(df, title=None):
         st.caption(f"Chart spans from {min(years)} to {max(years)}")
 
 
-# st.title('RF')
-# st.write(df_hk_rf)
-# st.title('Heat')
-# st.write(df_hk_heat)
-# st.title('RH')
-# st.write(df_hk_rh)
 plot_normalized_time_series(df_hk_rf, 'Total Rainfall (mm) over Time')
 plot_normalized_time_series(df_hk_heat, 'Mean HKHI(°C) over Time')
 plot_normalized_time_series(df_hk_rh, 'Mean Relative Humidity (%) over Time')

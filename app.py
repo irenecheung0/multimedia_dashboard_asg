@@ -9,10 +9,10 @@ import numpy as np
 #st.title("COMP7503 Multimedia Technologies Project")
 
 intro = st.Page("1_introduction.py", title="Introduction", icon="🏠")
-spotify_eda = st.Page("2_spotify_eda.py", title="Spotify Chart Data EDA", icon="🎷")
-weather_eda = st.Page("3_weather_eda.py", title="Weather Data EDA", icon="🌤️")
+spotify_eda = st.Page("2_spotify_eda.py", title="Spotify EDA", icon="🎷")
+weather_eda = st.Page("3_weather_eda.py", title="Weather EDA", icon="🌤️")
 correlation = st.Page("4_correlation.py", title="Correlation", icon="📈")
-playlist = st.Page("5_spotify_playlist.py", title="Generate Spotify Playlist", icon="💿")
+playlist = st.Page("5_spotify_playlist.py", title="Playlist", icon="💿")
 
 pg = st.navigation([intro, spotify_eda, weather_eda, correlation, playlist])
 pg.run()
@@ -121,8 +121,8 @@ def remove_duplicates_by_week_and_uri(df):
     duplicates_removed = initial_count - final_count
     
     # Display info about deduplication process
-    if duplicates_removed > 0:
-        st.info(f"Removed {duplicates_removed} duplicate records from the dataset. Original: {initial_count}, After deduplication: {final_count}")
+    #if duplicates_removed > 0:
+    #    st.info(f"Removed {duplicates_removed} duplicate records from the dataset. Original: {initial_count}, After deduplication: {final_count}")
     
     return df_deduplicated
 
