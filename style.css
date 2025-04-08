@@ -1,0 +1,49 @@
+/* Custom styling for Streamlit components */
+
+/* Style for h3 headings with Spotify green */
+h2, .h2, div[data-testid="stMarkdown"] h2 {
+    color: #1ED760 !important; /* Spotify green */
+}
+
+/* Style for selectbox with green border */
+div[data-testid="stSelectbox"] > div {
+    border: 2px solid #1ED760 !important; /* Forest green border */
+    border-radius: 4px !important;
+}
+
+/* Style for selectbox dropdown when focused/hovered */
+div[data-testid="stSelectbox"]:focus-within > div,
+div[data-testid="stSelectbox"]:hover > div {
+    border-color: #4caf50 !important; /* Lighter green when focused or hovered */
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3) !important; /* Green glow effect */
+}
+
+/* Style for the dropdown arrow */
+div[data-testid="stSelectbox"] svg {
+    color: #1ED760 !important; /* Green dropdown arrow */
+}
+
+/* Style the label text */
+div[data-testid="stSelectbox"] label {
+    color: #1ED760 !important; /* Green label text */
+    font-weight: 500 !important;
+}
+
+/* Style the selected option text */
+div[data-testid="stSelectbox"] div[data-baseweb="select"] span {
+    color: #1ED760 !important; /* Green option text */
+}
+
+/* Style all dropdown options */
+div[role="listbox"] li:hover {
+    background-color: rgba(76, 175, 80, 0.1) !important; /* Light green hover background */
+}
+
+div[role="listbox"] li div {
+    color: #1ED760 !important; /* Green text for dropdown options */
+}
+
+/* Selected option in dropdown */
+div[role="listbox"] li[aria-selected="true"] {
+    background-color: rgba(76, 175, 80, 0.2) !important; /* Darker green for selected option */
+}
