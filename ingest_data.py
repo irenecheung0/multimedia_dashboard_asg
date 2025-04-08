@@ -20,12 +20,20 @@ try:
     collection_rf = db[os.getenv('MONGO_COLLECTION_RF', 'your_collection_rf')]
     collection_heat = db[os.getenv('MONGO_COLLECTION_HEAT', 'your_collection_heat')]
     collection_rh = db[os.getenv('MONGO_COLLECTION_RH', 'your_collection_rh')]
-
-
 except Exception as e:
     print(f"Error connecting to MongoDB: {e}")
     exit()
 
+# Delete existing data in MongoDB collections
+try:
+    collection_spotify.delete_many({})
+    collection_rf.delete_many({})
+    collection_heat.delete_many({})
+    collection_rh.delete_many({})
+    print("Existing data deleted successfully.")
+except Exception as e:
+    print(f"Error deleting data from MongoDB: {e}")
+    exit()
 
 # Insert data into MongoDB
 try:
@@ -33,7 +41,6 @@ try:
     collection_rf.insert_many(df_hk_rf.to_dict('records'))
     collection_heat.insert_many(df_hk_heat.to_dict('records'))
     collection_rh.insert_many(df_hk_rh.to_dict('records'))
-
     print("Data ingestion completed successfully.")
 except Exception as e:
     print(f"Error inserting data into MongoDB: {e}")
