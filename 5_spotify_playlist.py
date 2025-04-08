@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import requests
+import datetime
 
 
 # Load custom CSS
@@ -121,17 +122,22 @@ top20 = calculate_and_get_top_20(df_weather_spotify, target_heat, target_rainfal
 
 # Display weather information
 st.header("Current Weather Conditions")
+
+# Add today's date
+today = datetime.datetime.now().strftime("%A, %B %d, %Y")
+st.subheader(f"{today}")
+
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.metric("Temperature", f"{weather_info['current_tmp']}°C")
+    st.metric("Temperature 🌡️", f"{weather_info['current_tmp']}°C")
 with col2:
-    st.metric("Rainfall", f"{weather_info['current_rainfall']} mm")
+    st.metric("Rainfall 🌧️", f"{weather_info['current_rainfall']} mm")
 with col3:
-    st.metric("Humidity", f"{weather_info['current_humidity']}%")
+    st.metric("Humidity 💦", f"{weather_info['current_humidity']}%")
 
 # Display the playlist
 st.header("Your Weather-Based Playlist")
-st.write("Songs that match the current weather conditions")
+#st.write("Songs that match the current weather conditions")
 
 # Function to format duration from ms to mm:ss
 def format_duration(ms):

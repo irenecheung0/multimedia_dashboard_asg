@@ -1,7 +1,7 @@
 /* Custom styling for Streamlit components */
 
 /* Style for h3 headings with Spotify green */
-h2, .h2, div[data-testid="stMarkdown"] h2 {
+h2, .h2, intro_title, div[data-testid="stMarkdown"] h2 {
     color: #1ED760 !important; /* Spotify green */
 }
 

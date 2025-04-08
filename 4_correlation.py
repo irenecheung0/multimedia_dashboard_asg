@@ -68,7 +68,7 @@ def calculate_weather_audio_correlation(audio_feature):
     #st.dataframe(correlation_matrix.style.highlight_max(axis=0))
     
     # Create a heatmap-like visualization using Streamlit
-    st.subheader(f'Correlation Heatmap: Weather Features vs {audio_feature}')
+    st.header(f'Weather Features vs {audio_feature}')
     
     # Convert correlation matrix to a format suitable for Streamlit
     corr_data = correlation_matrix.stack().reset_index()
@@ -84,6 +84,8 @@ def calculate_weather_audio_correlation(audio_feature):
         ).format('{:.3f}')
     )
 
+
+st.title("Correlation Analysis")
 
 calculate_weather_audio_correlation("energy")
 calculate_weather_audio_correlation("danceability")
