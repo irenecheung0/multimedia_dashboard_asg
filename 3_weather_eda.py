@@ -24,13 +24,6 @@ else:
 
 
 def plot_normalized_time_series(df, title=None):
-    """
-    Plot normalized values over time by Year-Week using Streamlit
-    
-    Args:
-        df: DataFrame containing 'YW' and 'normalizedValue' columns
-        title: Optional title for the plot
-    """
     # Sort by YW to ensure proper chronological order
     df_sorted = df.sort_values('YW')
     

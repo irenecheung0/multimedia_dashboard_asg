@@ -47,3 +47,4 @@ div[role="listbox"] li div {
 div[role="listbox"] li[aria-selected="true"] {
     background-color: rgba(76, 175, 80, 0.2) !important; /* Darker green for selected option */
 }
+
