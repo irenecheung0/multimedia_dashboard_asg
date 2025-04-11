@@ -51,8 +51,12 @@ def get_weather_data():
         }
     
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching weather data: {e}")
-        return None
+        print(f"Error fetching weather data: {e}, returning default values")
+        return {
+            "current_rainfall": 0,
+            "current_tmp": 24,
+            "current_humidity": 82
+        }
 
 
 def normalize_value(x, average_value, min_value, max_value):
@@ -137,7 +141,6 @@ with col3:
 
 # Display the playlist
 st.header("Your Weather-Based Playlist")
-#st.write("Songs that match the current weather conditions")
 
 # Function to format duration from ms to mm:ss
 def format_duration(ms):

@@ -25,15 +25,6 @@ else:
 
 
 def convert_year_week_to_date(year_week):
-    """
-    Convert a year-week format (YYYY-WW) to the date of the first day of that week.
-    
-    Args:
-        year_week (str): Year and week in 'YYYY-WW' format (e.g., '2022-01')
-        
-    Returns:
-        str: Date string in 'YYYY-MM-DD' format for the first day (Monday) of that week
-    """
     try:
         # Split the year-week string
         parts = year_week.split('-')
@@ -54,6 +45,7 @@ def convert_year_week_to_date(year_week):
     
     except (ValueError, TypeError) as e:
         # Handle potential parsing errors
+        # print(f"Error converting year-week to date: {e}")
         return None
 
 
